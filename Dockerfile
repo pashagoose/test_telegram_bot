@@ -6,7 +6,8 @@ WORKDIR /app
 
 RUN pip3 install pyTelegramBotAPI
 
-COPY echo_bot.py echo_bot.py
+COPY bot.py bot.py
+COPY memes memes
 
-CMD [ "python3", "echo_bot.py" ]
+CMD [ "python3", "bot.py" ]
 
