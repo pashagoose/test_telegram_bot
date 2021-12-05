@@ -1,0 +1,14 @@
+name: Build python
+
+on: [push, pull_request]
+
+jobs:
+        build:
+                name: compile
+
+                runs-on: ubuntu-latest
+
+                steps:
+                        run:
+                                python3 -m py_compile echo_bot.py
+
