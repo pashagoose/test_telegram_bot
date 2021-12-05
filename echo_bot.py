@@ -1,8 +1,6 @@
 import telebot
 import os
 
-a = 123sdgkajsfpk124ksdv;
-
 token = os.environ['TELEGRAM_BOT_TOKEN']
 
 bot = telebot.TeleBot(token, parse_mode=None)
