@@ -7,6 +7,7 @@ jobs:
                 name: compile
                 runs-on: ubuntu-latest
                 steps:
+                      - uses: actions/checkout@v2
                       - run: ls ${{ github.workspace }}
                       - run: python3 -m py_compile ${{github.workspace}}/echo_bot.py
 
