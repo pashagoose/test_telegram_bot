@@ -9,6 +9,7 @@ jobs:
                 runs-on: ubuntu-latest
 
                 steps:
+                        - name: Compile python  
                         run:
                                 python3 -m py_compile echo_bot.py
 
