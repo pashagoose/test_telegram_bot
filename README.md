@@ -1,20 +1,4 @@
 # Jason Statham Quotes Bot
-1) Гуськов Павел Максимович
-2) Бот отсылает по запросу цитаты Джейсона Стетхема (@yet_another_missing_semester_bot)
-3) Amazon
-4) Для автоматического перезапуска бота использовал watchtower и docker-compose. Контейнер с watchtower мониторит репозиторий на dockerhub, пингует его раз в какое-то время и сравнивает два образа на равенство. Если образы неравны, то он перезапускает рабочий контейнер. Вот содержимое  _docker-compose.yml_:
-```
-version: "3"
+This bot just sends one of 10 Jason Statham quotes (@yet_another_missing_semester_bot)\
 
-services:
-        jason_statham:
-                image: SECRET_USERNAME/jason_statham_bot
-                environment:
-                        TELEGRAM_BOT_TOKEN: "SECRET_TOKEN"
-
-        watchtower:
-                image: containrrr/watchtower
-                volumes:
-                        - /var/run/docker.sock:/var/run/docker.sock
-                command: --interval 10
-```
+The purpose was just to setup CI/CD system, work with docker and cloud services a little bit.
